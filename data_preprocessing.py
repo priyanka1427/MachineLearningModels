@@ -6,7 +6,7 @@ Created on Mon Jan 13 00:37:38 2020
 """
 
 import numpy as np
-import matplotlib.pyplot as ply
+#import matplotlib.pyplot as ply
 import pandas as pd
 
 dataset = pd.read_csv('Data.csv')
@@ -29,8 +29,6 @@ x[: , 0] = labelEncoder_x.fit_transform(x[: , 0])
 #transform = ColumnTransformer([('one_hot_encoder' , OneHotEncoder() , [0])] , remainder='passthrough')
 #x = np.array(transform.fit_transform[x])
 #print(x)
-
-
 transformer = ColumnTransformer([('one_hot_encoder', OneHotEncoder(), [0])],remainder='passthrough')
 x = np.array(transformer.fit_transform(x), dtype=np.float)
 
